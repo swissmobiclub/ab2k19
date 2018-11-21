@@ -654,7 +654,7 @@ form input, form textarea,.form-control,.form-control-select{
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
-.mi-slider-caption .mi-caption-text h1, .mi-short-home-bg .mi-slider-caption h1{
+.mi-slider-caption .mi-caption-text h1, .mi-short-home-bg .mi-slider-caption h1 {
 	font-size: 64px;
 	line-height: 74px;
 	font-weight: 600;
@@ -665,7 +665,7 @@ form input, form textarea,.form-control,.form-control-select{
 .mi-short-home-bg .mi-slider-caption h1 {
 	padding-bottom: 0;
 }
-.mi-creative-caption .mi-slider-caption .mi-caption-text h1{
+.mi-creative-caption .mi-slider-caption .mi-caption-text h1 {
 	color: #1e1e1e;
 }
 .mi-slider-caption .mi-caption-text {
@@ -673,7 +673,7 @@ form input, form textarea,.form-control,.form-control-select{
     width: 55%;
     float: right;
 }
-.mi-slider-caption.mi-fullwidth, .mi-fullwidth .mi-caption-text{
+.mi-slider-caption.mi-fullwidth, .mi-fullwidth .mi-caption-text {
 	width:100%;
 }
 .mi-social{

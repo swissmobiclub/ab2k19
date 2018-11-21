@@ -54,7 +54,7 @@
 }
 .navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus, .navbar .navbar-nav > li.active > a, .dropdown.full_menu ul.dropdown-menu li.active a  {
 	background-color: transparent;
-	color: black;
+	color: white;
 }
 @media (max-width: 1200px) {
 	.navbar-header {
