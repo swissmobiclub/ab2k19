@@ -59,7 +59,7 @@ html {
 }
 section {
 	position: relative;
-	padding: 120px 0;
+	padding: 50px 0;
 	overflow: hidden;
 	background-position:50% 50%;
 	background-size:cover;
@@ -264,10 +264,10 @@ img {
 }
 .mi-section-bottom {
 	padding-top: 0;
-	padding-bottom: 120px;
+	padding-bottom: 50px;
 }
 .mi-short-section {
-	padding: 80px 0;
+	padding: 20px 0;
 }
 .mi-short-heading {
 	padding-top: 40px;
