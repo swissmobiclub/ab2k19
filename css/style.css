@@ -2180,6 +2180,14 @@ blockquote.mi-bg-color, blockquote.mi-bg-image{
 .mi-btn-ele.mi-btn-ele-black-round,.mi-btn-ele.mi-btn-ele-blue-round,.mi-btn-ele.mi-btn-ele-black-round-border,.buttonanimation.mi-btn-ele.mi-btn-ele-black-round-border,.mi-btn-ele.mi-btn-ele-blue-round-border,.mi-btn-ele.mi-animate-3:hover  {
 	border-radius:40px;
 }
+
+.tito-tickets-button {
+	background-color: transparent !important;
+	border: none;
+	font: inherit;
+	text-transform: uppercase;
+}
+
 .mi-animate-1 span {
 	position: absolute;
 	display: block;
