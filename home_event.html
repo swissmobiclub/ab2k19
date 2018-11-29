@@ -4,7 +4,8 @@
 	<title>App Builders 2019 - Lugano, Switzerland</title>
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://js.tito.io/v1" async></script>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700,700i,800,800i,900,900ii%7CPoppins:300,400,500,600,700" rel="stylesheet">
 	<!-- Font Family -->
 	<link rel="stylesheet" href="css/fonts/font-awesome.min.css">
@@ -63,7 +64,7 @@
 						<a href="#location" class="dropdown-toggle">🌍 Location</a>
 					</li>  -->
 					<li class="dropdown">
-						<a href="#travel" class="dropdown-toggle">🛩 Information</a>
+						<a href="#information" class="dropdown-toggle">🛩 Information</a>
 					</li>
 				</ul>
 			</div>
@@ -164,7 +165,7 @@
 	</section>		
 
 	<!-- Block Fact -->
-	<section class="mi-white-text mi-bg-image mi-music-image">
+	<section class="mi-white-text mi-bg-image mi-music-image" style="padding:50px;">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-xs-6 col-sm-4 col-md-4">
@@ -199,7 +200,7 @@
 						<h2>Speakers</h2>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block">
 							<figure class="mi-figure">
@@ -217,7 +218,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block">
 							<figure class="mi-figure">
@@ -331,7 +332,7 @@
 						<h2>Buy Your Ticket</h2>
 					</div>
 				</div>
-				<div class="col-sm-4 col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="mi-price-block mi-bg-image">
 						<h3>Super Early Bird</h3>
 						<span class="mi-big-no">CHF 349</span>
@@ -343,10 +344,14 @@
 							<li><p>Actually Useful Swag</p></li>
 						</ul>
 						<hr>
-						<button class="mi-btn mi-mt-20">Register</button>
+						<!-- <button class="mi-btn mi-mt-20">Register -->
+						<tito-button event="swissmobidevs/app-builders-2019">
+							<button class="mi-btn mi-mt-20">Register</button>
+						</tito-button>	
+						<!-- </button> -->
 					</div>
 				</div>
-				<div class="col-sm-4 col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="mi-price-block mi-bg-image">
 						<h3>Early Bird</h3>
 						<span class="mi-big-no">CHF 399</span>
@@ -358,10 +363,10 @@
 							<li><p>Actually Useful Swag</p></li>
 						</ul>
 						<hr>
-						<button class="mi-btn mi-mt-20">Register</button>
+						<button class="mi-btn mi-mt-20">Coming Soon</button>
 					</div>
 				</div>
-				<div class="col-sm-4 col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="mi-price-block mi-bg-image">
 						<h3>Regular</h3>
 						<span class="mi-big-no">CHF 449</span>
@@ -373,7 +378,7 @@
 							<li><p>Actually Useful Swag</p></li>
 						</ul>
 						<hr>
-						<button class="mi-btn mi-mt-20">Register</button>
+						<button class="mi-btn mi-mt-20">Coming Soon</button>
 					</div>
 				</div>
 			</div>
@@ -384,6 +389,12 @@
 						<p>Apply to the <a href="https://github.com/swissmobiclub/appbuilders19">App Builders Scholarship</a> program before Janauary 31st to have a chance to win a free ticket.</p>
 					</div>
 				</div>
+				<div class="col-md-12">
+						<div class="mi-short-heading mi-pt-0">
+							<span class="mi-small-heading">Code of Conduct</span>
+							<p>When your purchase a ticket, you also agree to our <a href="http://confcodeofconduct.com">Code of Conduct</a>. Read it carefully before purchasing a ticket.</p>
+						</div>
+					</div>
 			</div>
 		</div>
 	</section>
@@ -450,7 +461,7 @@
 					</div>
 					<div class="mi-items-list">
 						<div class="row">
-							<div class="col-xs-6 col-sm-6 col-md-6 mi-single-item">
+							<div class="col-xs-12 col-sm-6 col-md-6 mi-single-item">
 								<figure class="mi-figure" style="box-shadow: 0 8px 45px rgba(30,30,30,0.1);">
 									<img src="img/sponsors.jpg" alt="img01">
 									<!-- <figcaption class="mi-figcaption">
@@ -462,7 +473,7 @@
 								</figure><br>
 								<h3>Promote your company and product.</h3>
 							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 mi-single-item">
+							<div class="col-xs-12 col-sm-6 col-md-6 mi-single-item">
 								<figure class="mi-figure" style="box-shadow: 0 8px 45px rgba(30,30,30,0.1);">
 									<img src="img/sponsors-2.jpg" alt="img01">
 								</figure><br>
@@ -471,65 +482,6 @@
 						</div>
 					</div>
 					<h4>View our <a href="#"><span style="text-decoration: underline;">Sponsorship Kit</span></a> and <a href="mailto:info@swissmobiclub.org"><span style="text-decoration: underline;">get in touch</span></a>.</h4>
-					<!-- <div class="mi-heading">
-						<h2>Gold</h2>
-					</div>
-					<div class="mi-items-list">
-						<div class="row">
-							<div class="col-xs-6 col-sm-6 col-md-3 mi-single-item">
-								<a href="img/image/1000-700/image_1.jpg" class="work-gallery mfp-image">
-									<figure class="mi-figure">
-										<img src="img/image/1000-700/image_1.jpg" alt="img01">
-										<figcaption class="mi-figcaption">
-											<div class="mi-name">
-												<h3>Architect Designing</h3>
-												<p>Lulu Mafia</p>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-3 mi-single-item">
-								<a href="img/image/1000-700/image_2.jpg" class="work-gallery mfp-image">
-									<figure class="mi-figure">
-										<img src="img/image/1000-700/image_2.jpg" alt="img01">
-										<figcaption class="mi-figcaption">
-											<div class="mi-name">
-												<h3>Architect Designing</h3>
-												<p>Lulu Mafia</p>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-3 mi-single-item">
-								<a href="img/image/1000-700/image_2.jpg" class="work-gallery mfp-image">
-									<figure class="mi-figure">
-										<img src="img/image/1000-700/image_2.jpg" alt="img01">
-										<figcaption class="mi-figcaption">
-											<div class="mi-name">
-												<h3>Architect Designing</h3>
-												<p>Lulu Mafia</p>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-3 mi-single-item">
-								<a href="img/image/1000-700/image_2.jpg" class="work-gallery mfp-image">
-									<figure class="mi-figure">
-										<img src="img/image/1000-700/image_2.jpg" alt="img01">
-										<figcaption class="mi-figcaption">
-											<div class="mi-name">
-												<h3>Architect Designing</h3>
-												<p>Lulu Mafia</p>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -542,6 +494,7 @@
 					<div class="mi-short-heading text-center">
 						<span class="mi-small-heading">More Information</span>
 						<h2>About the Conference</h2>
+						<p>The conference takes place at the <a href="https://goo.gl/maps/e5wUoMZbPLR2" target="_blank">Palazzo dei Congressi</a> in Lugano, one of the biggest congress centers in the area. It is right in the city center of Lugano and faces the lake and the beautiful Parco Ciani.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -623,7 +576,7 @@
 						<p>We are a small team distributed all over Europe with a big passion to create conferences for the community. We organized more than 6 conferences for mobile developers since 2016 with a total of over 1000 attendees from all over the world. You can be sure that we will do our best to create the best experience possible.</p>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block" style="padding: 20px;">
 							<a href="https://twitter.com/BalestraPatrick" target="_blank">
@@ -637,7 +590,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block" style="padding: 20px;">
 							<a href="https://twitter.com/LucaScuderi" target="_blank">
@@ -651,7 +604,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block" style="padding: 20px;">
 							<a href="https://twitter.com/SusannaChuck" target="_blank">
@@ -665,7 +618,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block" style="padding: 20px;">
 							<a href="https://twitter.com/hamen" target="_blank">
@@ -683,64 +636,6 @@
 			
 		</div>
 	</section>
-	
-	<!-- Testmonials -->
-	<!-- <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div class="mi-heading">
-					<span class="mi-small-heading">What People Think</span>
-					<h2>About Last Year</h2>
-				</div>
-				<div class="mi-one-carousel"> 
-					<div class="item">
-						<div class="mi-mb-30">
-							<div class="mi-client-img mi-testi-img">
-								<img src="img/testimonials/john.jpg" class="img-circle" alt="image">
-							</div>
-						</div>
-						<div class="mi-testi-para">
-							<h3>John Sundell</h3>
-							<p>Creator of Swift by Sundell</p>
-							<p class="mi-mb-30">On my way home from another amazing edition of @appbuilders_ch in beautiful Lugano 🇨🇭- where I gave my first ever non-technical talk, and met so many wonderful, inspiring people! 😊</p>
-							<ul class="mi-social-links">
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item">
-						<div class="mi-mb-30">
-							<div class="mi-client-img mi-testi-img">
-								<img src="img/testimonials/dave.jpg" class="img-circle" alt="image">
-							</div>
-						</div>
-						<div class="mi-testi-para">
-							<h3>Dave DeLong</h3>
-							<p>iOS Architect</p>
-							<p class="mi-mb-30">Heading home after a fabulous week in Lugano attending @appbuilders_ch. I’ve super impressed with the quality of conferences I’ve been going to. Things have come a long way in the past 10 years</p>
-							<ul class="mi-social-links">
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<!-- App Link -->
-	<!-- <section class="mi-section-bottom">
-		<div class="container">
-			<div class="row text-center">
-				<div class="col-md-12">
-					<h3>Download the App Builders app in the App Store and Google Play.</h3>
-					<a href="" class="mi-btn">App Store</a>
-					<a href="" class="mi-btn">Google Play</a>
-				</div>
-			</div>
-		</div>
-	</section> -->
 
 	<!-- Footer -->
 	<footer>
@@ -763,7 +658,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mi_subscribe_now mi-mb-30">
 						 <h3>Subscribe Now</h3>
-						 <p class="mi-mb-30">We will only send emails regarding App Builders, no spam, ever.</p>
+						 <p class="mi-mb-30" style="color: white;">We will only send emails regarding App Builders, no spam, ever.</p>
 						 <form action="https://appbuilders.us12.list-manage.com/subscribe/post?u=34f0052f561ed76a524b93bd1&amp;id=7a6a38f36b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
 							<!-- <div class="form-group"> -->
 								<input type="text" value="" placeholder="you@amazing.com" name="EMAIL" id="newsletter-form-email" class="form-control form-control-lg" placeholder="Your Email Here" autocomplete="off">
@@ -786,7 +681,7 @@
 		</div>
 		<div class="mi_footer-bottom">
 			<div class="container f-b">
-				   <div class="mi-f-b">Getin Business Templates  <span class="heart"><i class="fa fa-heart"></i></span> © 2017-18  </div>
+				   <div class="mi-f-b">Getin Business Templates © 2018 - Customized by App Builders.</div>
 			</div>
 		</div>
 	</footer>	
