@@ -32,6 +32,13 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<![endif]-->
 	<script src="https://js.tito.io/v1" async></script>
+
+	<!-- Vue.js -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
 </head>
 <body>
 	
@@ -208,21 +215,21 @@
 						<h2>Speakers</h2>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-4">
+				
+				<div class="col-sm-6 col-md-4" v-for="speaker in speakers">
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block">
 							<figure class="mi-figure">
-								<img src="img/people/speaker-soon.jpg" alt="image">
+								<img v-bind:src="speaker.picture" alt="image">
 							</figure>
 							<div class="mi-rect-bg"></div>
 						</div>
-						<div class="mi-caption ">
-							<h3 style="margin-bottom:10px;">Coming Soon</h3>
-							<p style="margin-bottom:10px;">First speakers will be announced in December.</p>
-							<!-- <ul class="mi-social-links">
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-							</ul> -->
+						<div class="mi-caption">
+							<h3 style="margin-bottom:10px;">{{ speaker.firstName }} {{ speaker.lastName }}</h3>
+							<p style="margin-bottom:10px;">{{ speaker.jobTitle }} <span v-if="speaker.company != ''">@ {{ speaker.company }}</span></p>
+							<ul class="mi-social-links" v-show="speaker.twitter != null">
+								<li><a v-bind:href="'https://twitter.com/' + speaker.twitter"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -237,10 +244,6 @@
 						<div class="mi-caption">
 							<h3 style="margin-bottom:10px;">Want to speak?</h3>
 							<p>Submit a talk to the CfP starting beginning of December.</p>
-							<!-- <ul class="mi-social-links">
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-							</ul> -->
 						</div>
 					</div>
 				</div>
@@ -710,5 +713,6 @@
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCEKPkNNxCZ5Bwt0FjjbsE2HsePYbpkS84"></script>
 	<!-- Main Jquery -->
 	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
