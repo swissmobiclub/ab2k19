@@ -98,7 +98,7 @@
 	.navbar-collapse.collapse.in {  
 		display: block !important;
 		overflow-y: auto; 
-		border-top: 1px solid rgba(255,255,255,0.5);
+		/* border-top: 1px solid rgba(255,255,255,0.5); */
 	}
 	.navbar-collapse.collapse.in ul.nav{
 		max-height: 480px;
