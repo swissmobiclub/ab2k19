@@ -18,8 +18,6 @@
 (function($){
 	"use strict"
 	$(window).on('load',function(){
-		/*	Loader	*/
-		$(".preloader").delay(600).fadeOut("slow");
 		/*	Popup	*/
 		var popUp = $(".work-gallery");
 		var popUpPlayer = $(".popup-player");
