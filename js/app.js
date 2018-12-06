@@ -29,7 +29,6 @@ new Vue({
                 speakers.forEach((s) => {
                     result.push(s.data());
                 });
-                console.log(result);
                 self.speakers = result;
             });
 
