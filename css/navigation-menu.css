@@ -57,6 +57,10 @@
 	color: white;
 }
 @media (max-width: 1200px) {
+
+	.navbar-brand {
+		width: 50px;
+	}
 	.navbar-header {
 		float: none;
 	}
