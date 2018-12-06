@@ -596,7 +596,7 @@ form input, form textarea,.form-control,.form-control-select{
 	-o-background-size: cover;
 	background-size: cover;
 }
-.mi-home-bg {background-image: url(../img/bg/home_bg.jpg);}.mi-agency-bg {background-image: url(../img/bg/agency_bg.jpg);}.mi-agency-bg-1{background-image: url(../img/bg/agency_bg_1.jpg);}.mi-agency-bg-one{background-image: url(../img/bg/agency_bg_one.jpg);}.mi-app-landing{background-image: url(../img/bg/app_land.jpg);}.mi-app-show{background-image: url(../img/bg/app_show.jpg);}.mi-archi{background-image: url(../img/bg/archi.jpg);}.mi-bakery-one{background-image: url(../img/bg/bakery_one.jpg);}.mi-blog-1{background-image: url(../img/bg/blog_1.jpg);}.mi-blog-2{background-image: url(../img/bg/blog_2.jpg);}.mi-blog-3{background-image: url(../img/bg/blog_3.jpg);}.mi-business{background-image: url(../img/bg/business.jpg);}.mi-const{background-image: url(../img/bg/const.jpg);}.mi-corporate{background-image: url(../img/bg/corporate.jpg);}.mi-corporate-1{background-image: url(../img/bg/corporate_1.jpg);}.mi-corporate-one{background-image: url(../img/bg/corporate_one.jpg);}.mi-event{background-image: url(../img/lugano.jpg);}.mi-fashion-one{background-image: url(../img/bg/fashion_one.jpg);}.mi-fitness{background-image: url(../img/bg/fitness.jpg);}.mi-freelance-one{background-image: url(../img/bg/freelance_one.jpg);}.mi-fullwidth-slider{background-image: url(../img/bg/fullwidth.jpg);}.mi-gym-one{background-image: url(../img/bg/gym_one.jpg);}.mi-music-one{background-image: url(../img/bg/music_one.jpg);}.mi-photography{background-image: url(../img/bg/photography.jpg);}.mi-portfolio-1{background-image: url(../img/bg/port_1.jpg);}.mi-portfolio-3{background-image: url(../img/bg/port_3.jpg);}.mi-portfolio-4{background-image: url(../img/bg/port_4.jpg);}.mi-restaurant{background-image: url(../img/bg/restaurant.jpg);}.mi-resume-one{background-image: url(../img/bg/resume_one.jpg);}.mi-wedding{background-image: url(../img/bg/wedding.jpg);}.mi-bakery-bg-1{background-image: url(../img/bg/bakery-bg-1.jpg);}.mi-bakery-bg-2{background-image: url(../img/bg/bakery-bg-2.jpg);}.mi-bakery-bg-3{background-image: url(../img/bg/bakery-bg-3.jpg);}.mi-bakery-bg-4{background-image: url(../img/bg/bakery-bg-4.jpg);}.mi-bakery-bg-5{background-image: url(../img/bg/bakery-bg-5.jpg);}
+/*.mi-home-bg {background-image: url(../img/bg/home_bg.jpg);}*/.mi-agency-bg {background-image: url(../img/bg/agency_bg.jpg);}.mi-agency-bg-1{background-image: url(../img/bg/agency_bg_1.jpg);}.mi-agency-bg-one{background-image: url(../img/bg/agency_bg_one.jpg);}.mi-app-landing{background-image: url(../img/bg/app_land.jpg);}.mi-app-show{background-image: url(../img/bg/app_show.jpg);}.mi-archi{background-image: url(../img/bg/archi.jpg);}.mi-bakery-one{background-image: url(../img/bg/bakery_one.jpg);}.mi-blog-1{background-image: url(../img/bg/blog_1.jpg);}.mi-blog-2{background-image: url(../img/bg/blog_2.jpg);}.mi-blog-3{background-image: url(../img/bg/blog_3.jpg);}.mi-business{background-image: url(../img/bg/business.jpg);}.mi-const{background-image: url(../img/bg/const.jpg);}.mi-corporate{background-image: url(../img/bg/corporate.jpg);}.mi-corporate-1{background-image: url(../img/bg/corporate_1.jpg);}.mi-corporate-one{background-image: url(../img/bg/corporate_one.jpg);}.mi-event{background-image: url(../img/lugano.jpg);}.mi-fashion-one{background-image: url(../img/bg/fashion_one.jpg);}.mi-fitness{background-image: url(../img/bg/fitness.jpg);}.mi-freelance-one{background-image: url(../img/bg/freelance_one.jpg);}.mi-fullwidth-slider{background-image: url(../img/bg/fullwidth.jpg);}.mi-gym-one{background-image: url(../img/bg/gym_one.jpg);}.mi-music-one{background-image: url(../img/bg/music_one.jpg);}.mi-photography{background-image: url(../img/bg/photography.jpg);}.mi-portfolio-1{background-image: url(../img/bg/port_1.jpg);}.mi-portfolio-3{background-image: url(../img/bg/port_3.jpg);}.mi-portfolio-4{background-image: url(../img/bg/port_4.jpg);}.mi-restaurant{background-image: url(../img/bg/restaurant.jpg);}.mi-resume-one{background-image: url(../img/bg/resume_one.jpg);}.mi-wedding{background-image: url(../img/bg/wedding.jpg);}.mi-bakery-bg-1{background-image: url(../img/bg/bakery-bg-1.jpg);}.mi-bakery-bg-2{background-image: url(../img/bg/bakery-bg-2.jpg);}.mi-bakery-bg-3{background-image: url(../img/bg/bakery-bg-3.jpg);}.mi-bakery-bg-4{background-image: url(../img/bg/bakery-bg-4.jpg);}.mi-bakery-bg-5{background-image: url(../img/bg/bakery-bg-5.jpg);}
 .mi-overlay-white {
     position: absolute;
 	left:0;
@@ -1367,9 +1367,9 @@ span.counter {
 	margin: 40px 0;
 	box-shadow: 0 8px 45px rgba(30,30,30,0.1);
 }
-.mi-price-block.mi-bg-image {
+/* .mi-price-block.mi-bg-image {
 	background-image:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),url("../img/bg/home_bg.jpg");
-}
+} */
 .mi-price-block hr {
 	width: 50px;
 	border-top: 2px solid var(--tint-color);
@@ -2231,9 +2231,9 @@ blockquote.mi-bg-color, blockquote.mi-bg-image{
 .mi-animate-2:hover{
     -webkit-box-shadow: -250px 0 0 #1e1e1e inset;
 }
-.mi-fact-image {
+/* .mi-fact-image {
 	background-image: linear-gradient(rgba(30,30,30,0.7),rgba(30,30,30,0.8)),url("../img/bg/home_bg.jpg");
-}
+} */
 .mi-fashion-image {
 	background-image: linear-gradient(rgba(30,30,30,0.7),rgba(30,30,30,0.8)),url("../img/bg/resume_one.jpg");
 }
