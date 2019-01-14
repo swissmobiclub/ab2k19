@@ -36,96 +36,97 @@ new Vue({
     }
 });
 
-// new Vue({
-//     el: '#stories',
-//     data: {
-//         speakers: []
-//     },
-//     mounted: function() {
-//         this.loadData();
-//     },
-//     methods: {
-//         loadData: function() {
-//             var self = this;
+new Vue({
+    el: '#stories',
+    data: {
+        stories: []
+    },
+    mounted: function() {
+        this.loadData();
+    },
+    methods: {
+        loadData: function() {
+            var self = this;
 
-//             db.collection("speakers").where("isStory", "==", true).get().then((speakers) => {
-//                 var result = [];
-//                 speakers.forEach((s) => {
-//                     result.push(s.data());
-//                 });
-//                 self.speakers = result;
-//             });
+            db.collection("speakers").where("isStory", "==", true).get().then((speakers) => {
+                var result = [];
+                speakers.forEach((s) => {
+                    result.push(s.data());
+                });
+                self.stories = result;
+            });
 
-//         }
-//     }
-// });
+        }
+    }
+});
 
-// new Vue({
-//     el: '#schedule',
-//     data: {
-//         talks: [],
-//         speakers: {}
-//     },
-//     mounted: function() {
-//         this.loadData();
-//     },
-//     methods: {
-//         loadData: function() {
-//             var self = this;
+new Vue({
+    el: '#schedule',
+    data: {
+        talks: [],
+        speakers: {}
+    },
+    mounted: function() {
+        this.loadData();
+    },
+    methods: {
+        loadData: function() {
+            var self = this;
 
-//             db.collection("speakers").get().then((speakers) => {
-//                 var spks = {};
-//                 speakers.forEach((s) => {
-//                     var data = s.data();
-//                     spks[data["speakerId"]] = data;
-//                 });
-//                 self.speakers = spks;
+            db.collection("speakers").get().then((speakers) => {
+                var spks = {};
+                speakers.forEach((s) => {
+                    var data = s.data();
+                    spks[data["speakerId"]] = data;
+                });
+                self.speakers = spks;
+                
+                db.collection("talks").get().then((talks) => {
+                    var result = [[],[],[],[]];
+                    talks.forEach((t) => {
+                        console.log(t);
+                        var data = t.data();
+                        data["speakerObj"] = spks[data["speaker"]];
+                        if (data["day"] === "Monday 16th") {
+                            if(data["room"] === "Room A") {
+                                result[0].push(data);
+                            } else if (data["room"] === "Room B") {
+                                result[1].push(data);
+                            } else {
+                                result[0].push(data);
+                                result[1].push(data);
+                            }
+                        } else {
+                            if(data["room"] === "Room A") {
+                                result[2].push(data);
+                            } else if (data["room"] === "Room B") {
+                                result[3].push(data);
+                            } else {
+                                result[2].push(data);
+                                result[3].push(data);
+                            }
+                        }
+                    });
 
-//                 db.collection("talks").get().then((talks) => {
-//                     var result = [[],[],[],[]];
-//                     talks.forEach((t) => {
-//                         var data = t.data();
-//                         data["speakerObj"] = spks[data["speaker"]];
-//                         if (data["day"] === "Monday 16th") {
-//                             if(data["room"] === "Firebase Room") {
-//                                 result[0].push(data);
-//                             } else if (data["room"] === "Secondary") {
-//                                 result[1].push(data);
-//                             } else {
-//                                 result[0].push(data);
-//                                 result[1].push(data);
-//                             }
-//                         } else {
-//                             if(data["room"] === "Firebase Room") {
-//                                 result[2].push(data);
-//                             } else if (data["room"] === "Secondary") {
-//                                 result[3].push(data);
-//                             } else {
-//                                 result[2].push(data);
-//                                 result[3].push(data);
-//                             }
-//                         }
-//                     });
+                    var compare = function(a, b) {
+                        if (a["time"] > b["time"]) {
+                            return 1;
+                        } else if (a["time"] < b["time"]) {
+                            return -1;
+                        } else {
+                            return 0;
+                        }
+                    };
 
-//                     var compare = function(a, b) {
-//                         if (a["time"] > b["time"]) {
-//                             return 1;
-//                         } else if (a["time"] < b["time"]) {
-//                             return -1;
-//                         } else {
-//                             return 0;
-//                         }
-//                     };
+                    result[0].sort(compare);
+                    result[1].sort(compare);
+                    result[2].sort(compare);
+                    result[3].sort(compare);
+                    console.log(result);
+                    self.talks = result;
+                });
+            });
 
-//                     result[0].sort(compare);
-//                     result[1].sort(compare);
-//                     result[2].sort(compare);
-//                     result[3].sort(compare);
-//                     console.log(result);
-//                     self.talks = result;
-//                 });
-//             });
-
-//         }
-//     }
-// });
+        }
+    }
+});

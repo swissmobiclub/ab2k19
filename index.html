@@ -165,7 +165,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="mi-heading">
-						<span class="mi-small-heading">Meet The Line-Up</span>
+						<span class="mi-small-heading">Meet The Speakers</span>
 						<h2>Speakers</h2>
 					</div>
 				</div>
@@ -201,9 +201,40 @@
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</section>
+
+	<section class="mi-creative-caption" id="stories">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="mi-heading">
+							<h2>Stories</h2>
+							<p>Stories are special sessions at App Builders wher knowledge and experience are shared by interviewing extraordinary people of various industries.<br>
+								They will be interviewed by our friend <a href="https://twitter.com/macdevnet" target="_blank">Steve Scott</a>. Make sure not to miss them, you won't get a chance to meet them anywhere else.</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4" v-for="speaker in stories">
+						<div class="mi-hove-figure">
+							<div class="mi-rect-block">
+								<figure class="mi-figure">
+									<img v-bind:src="speaker.picture" alt="image">
+								</figure>
+								<div class="mi-rect-bg"></div>
+							</div>
+							<div class="mi-caption">
+								<h3 style="margin-bottom:10px;">{{ speaker.firstName }} {{ speaker.lastName }}</h3>
+								<p style="margin-bottom:10px;">{{ speaker.jobTitle }} <span v-if="speaker.company != ''">@ {{ speaker.company }}</span></p>
+								<ul class="mi-social-links" v-show="speaker.twitter != null">
+									<li><a v-bind:href="'https://twitter.com/' + speaker.twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	<!-- Event Schedule -->
 	<!-- <section id="schedule">
@@ -217,6 +248,16 @@
 				</div>
 				<div class="col-md-6">
 					<ul class="mi-mr-60">
+						<div v-for="(talk, index) in talks[0]" class="schedule-listing" v-bind:class="{ bg: index % 2 == 0 }">
+							<span class="schedule-slot-time">{{ talk.time }}</span>
+							<div class="schedule-slot-info">
+								<div class="schedule-slot-info-content">
+									<h3 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
+									<h4 class="schedule-slot-title">{{ talk.title }}</h4>
+									<p class="schedule-slot-desc">{{ talk.description }}</p>
+								</div>
+							</div>
+						</div>
 						<li class="mi-timeline-item">
 							<div class="mi-timeline-info">
 								<span>March 23, 2016</span>
@@ -228,25 +269,15 @@
 							</div>
 						</li>
 						<li class="mi-timeline-item">
-							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
-							</div>
-							<div class="mi-timeline-marker"></div>
-							<div class="mi-timeline-para">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
-							</div>
-						</li>
-						<li class="mi-timeline-item">
-							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
-							</div>
-							<div class="mi-timeline-marker"></div>
-							<div class="mi-m-0">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
-							</div>
-						</li>              
+								<div class="mi-timeline-info">
+									<span>March 23, 2016</span>
+								</div> 
+								<div class="mi-timeline-marker"></div>
+								<div class="mi-timeline-para">
+									<h4>Event Title</h4>
+									<p>Agile frameworks to provide a high level overviews.</p>
+								</div>
+							</li>
 					</ul>
 				</div>
 				<div class="col-md-6">
@@ -261,26 +292,6 @@
 								<p>Agile frameworks to provide a high level overviews.</p>
 							</div>
 						</li>
-						<li class="mi-timeline-item">
-							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
-							</div>
-							<div class="mi-timeline-marker"></div>
-							<div class="mi-timeline-para">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
-							</div>
-						</li>
-						<li class="mi-timeline-item">
-							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
-							</div>
-							<div class="mi-timeline-marker"></div>
-							<div class="mi-m-0">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
-							</div>
-						</li>              
 					</ul>
 				</div>
 			</div>
