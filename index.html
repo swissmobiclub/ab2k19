@@ -66,9 +66,9 @@
 					<li class="dropdown">
 						<a href="#sponsors" class="dropdown-toggle">🤝 Sponsors</a>
 					</li>
-					<!-- <li class="dropdown">
+					<li class="dropdown">
 						<a href="#schedule" class="dropdown-toggle">⏰ Schedule</a>
-					</li> -->
+					</li>
 					<li class="dropdown">
 						<a href="#information" class="dropdown-toggle">🛩 Information</a>
 					</li>
@@ -205,15 +205,15 @@
 		</div>
 	</section>
 
+	<!-- Stories -->
 	<section class="mi-creative-caption" id="stories">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="mi-heading">
-							<h2>Stories</h2>
-							<p>Stories are special sessions at App Builders wher knowledge and experience are shared by interviewing extraordinary people of various industries.<br>
-								They will be interviewed by our friend <a href="https://twitter.com/macdevnet" target="_blank">Steve Scott</a>. Make sure not to miss them, you won't get a chance to meet them anywhere else.</p>
-						</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="mi-heading">
+						<h2>Stories</h2>
+						<p>Stories are special sessions at App Builders wher knowledge and experience are shared by interviewing extraordinary people of various industries.<br>
+							They will be interviewed by our friend <a href="https://twitter.com/macdevnet" target="_blank">Steve Scott</a>. Make sure not to miss them, you won't get a chance to meet them anywhere else.</p>
 					</div>
 					<div class="col-sm-6 col-md-4" v-for="speaker in stories">
 						<div class="mi-hove-figure">
@@ -234,10 +234,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
 	<!-- Event Schedule -->
-	<!-- <section id="schedule">
+	<section id="schedule">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -247,56 +248,46 @@
 					</div>
 				</div>
 				<div class="col-md-6">
+					
+				</div>
+				<div class="col-md-6">
+					
+				</div>
+				<div class="col-md-6">
+					<h3>Monday 29th</h3>
 					<ul class="mi-mr-60">
-						<div v-for="(talk, index) in talks[0]" class="schedule-listing" v-bind:class="{ bg: index % 2 == 0 }">
-							<span class="schedule-slot-time">{{ talk.time }}</span>
-							<div class="schedule-slot-info">
-								<div class="schedule-slot-info-content">
-									<h3 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
-									<h4 class="schedule-slot-title">{{ talk.title }}</h4>
-									<p class="schedule-slot-desc">{{ talk.description }}</p>
-								</div>
-							</div>
-						</div>
-						<li class="mi-timeline-item">
+						<div v-for="(talk, index) in talks[0]" class="mi-timeline-item">
 							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
+								<span>{{ talk.time }} - {{ talk.room }}</span>
 							</div> 
 							<div class="mi-timeline-marker"></div>
 							<div class="mi-timeline-para">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
+								<h3 style="margin-bottom: 0px; text-transform: none;">{{ talk.title }}</h4>
+								<h4 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
+								<p style="padding-bottom: 10px;">{{ talk.description }}</p>
 							</div>
-						</li>
-						<li class="mi-timeline-item">
-								<div class="mi-timeline-info">
-									<span>March 23, 2016</span>
-								</div> 
-								<div class="mi-timeline-marker"></div>
-								<div class="mi-timeline-para">
-									<h4>Event Title</h4>
-									<p>Agile frameworks to provide a high level overviews.</p>
-								</div>
-							</li>
+						</div>
 					</ul>
 				</div>
 				<div class="col-md-6">
+					<h3>Tuesday 30th</h3>
 					<ul class="mi-mr-60">
-						<li class="mi-timeline-item">
+						<div v-for="(talk, index) in talks[1]" class="mi-timeline-item" v-bind:class="{ bg: index % 2 == 0 }">
 							<div class="mi-timeline-info">
-								<span>March 23, 2016</span>
+								<span>{{ talk.time }} - {{ talk.room }}</span>
 							</div> 
 							<div class="mi-timeline-marker"></div>
 							<div class="mi-timeline-para">
-								<h4>Event Title</h4>
-								<p>Agile frameworks to provide a high level overviews.</p>
+								<h3 style="margin-bottom: 0px; text-transform: none;">{{ talk.title }}</h4>
+								<h4 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
+								<p style="padding-bottom: 10px;">{{ talk.description }}</p>
 							</div>
-						</li>
+						</div>
 					</ul>
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<!-- Tickets -->
 	<section class="mi-pricing-table mi-section-bottom" id="tickets">
@@ -320,7 +311,7 @@
 							<li><p>Actually Useful Swag</p></li>
 						</ul>
 						<hr>
-						<tito-button class="mi-btn mi-mt-20" event="swissmobiclub/app-builders-2019">Sold Out</tito-button>
+						<tito-button class="mi-btn mi-mt-20" style="background-color: gray;" event="swissmobiclub/app-builders-2019">Sold Out</tito-button>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4">
@@ -489,7 +480,7 @@
 								</div>
 								<div class="mi-content">
 									<h3>Accomodation</h3>
-									<p>We have collected the best hotels in Lugano for you. You can easily book online directly at this link.</p>
+									<p>We have collected the best hotels in Lugano for you. You can easily book online directly at this <a href="https://reservations-dms.verticalbooking.com/prima_pagina_congresso.htm?id_congresso=110&id_canale=1038&id_stile=41" target="_blank">link</a>.</p>
 								</div>
 							</div>
 						</div>

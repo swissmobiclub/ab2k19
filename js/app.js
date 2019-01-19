@@ -82,29 +82,16 @@ new Vue({
                 self.speakers = spks;
                 
                 db.collection("talks").get().then((talks) => {
-                    var result = [[],[],[],[]];
+                    const dayOne = "Monday 29th";
+                    const dayTwo = "Tuesday 30th";
+                    var result = [[],[]];
                     talks.forEach((t) => {
-                        console.log(t);
                         var data = t.data();
                         data["speakerObj"] = spks[data["speaker"]];
-                        if (data["day"] === "Monday 16th") {
-                            if(data["room"] === "Room A") {
-                                result[0].push(data);
-                            } else if (data["room"] === "Room B") {
-                                result[1].push(data);
-                            } else {
-                                result[0].push(data);
-                                result[1].push(data);
-                            }
+                        if (data["day"] === dayOne) {
+                            result[0].push(data);
                         } else {
-                            if(data["room"] === "Room A") {
-                                result[2].push(data);
-                            } else if (data["room"] === "Room B") {
-                                result[3].push(data);
-                            } else {
-                                result[2].push(data);
-                                result[3].push(data);
-                            }
+                            result[1].push(data);
                         }
                     });
 
@@ -120,9 +107,6 @@ new Vue({
 
                     result[0].sort(compare);
                     result[1].sort(compare);
-                    result[2].sort(compare);
-                    result[3].sort(compare);
-                    console.log(result);
                     self.talks = result;
                 });
             });

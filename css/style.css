@@ -1772,9 +1772,11 @@ pre code {
 }
 .mi-timeline-info {
 	font-size: 12px;
+	padding-bottom: 5px; 
+	padding-top: 5px;
 }
 .mi-timeline-para{
-	padding-bottom:60px;
+	/* padding-bottom:60px; */
 }
 .mi-timeline-marker:before {
 	background: #fff;
