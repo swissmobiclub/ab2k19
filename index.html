@@ -174,7 +174,8 @@
 					<div class="mi-hove-figure">
 						<div class="mi-rect-block">
 							<figure class="mi-figure">
-								<a v-bind:href="'https://twitter.com/' + speaker.twitter" target="_blank"><img v-bind:src="speaker.picture" alt="image"></a>
+								<a v-bind:href="'https://twitter.com/' + speaker.twitter" v-show="speaker.twitter != null" target="_blank"><img v-bind:src="speaker.picture" alt="image"></a>
+								<a v-bind:href="speaker.website" v-show="speaker.website != null" target="_blank"><img v-bind:src="speaker.picture" alt="image"></a>
 							</figure>
 							<div class="mi-rect-bg"></div>
 						</div>
@@ -183,6 +184,9 @@
 							<p style="margin-bottom:10px;">{{ speaker.jobTitle }} <span v-if="speaker.company != ''">@ {{ speaker.company }}</span></p>
 							<ul class="mi-social-links" v-show="speaker.twitter != null">
 								<li><a v-bind:href="'https://twitter.com/' + speaker.twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+							<ul class="mi-social-links" v-show="speaker.website != null">
+								<li><a v-bind:href="speaker.website" target="_blank"><i class="fa fa-globe"></i></a></li>
 							</ul>
 						</div>
 					</div>
