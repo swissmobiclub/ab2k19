@@ -87,7 +87,17 @@ new Vue({
                     var result = [[],[]];
                     talks.forEach((t) => {
                         var data = t.data();
-                        data["speakerObj"] = spks[data["speaker"]];
+                        // Check if there are multiple speakers.
+                        if (data['speaker2'] != undefined && data['speaker3'] != undefined) {
+                            // Check if data contains `speaker2` and `speaker3`, and create a new string where we encode the three names in one first name because ain't got time for that
+                            const firstSpeaker = `${spks[data["speaker"]]["firstName"]} ${spks[data["speaker"]]["lastName"]}`;
+                            const secondSpeaker = `${spks[data["speaker2"]]["firstName"]} ${spks[data["speaker2"]]["lastName"]}`;
+                            const thirdSpeaker = `${spks[data["speaker3"]]["firstName"]} ${spks[data["speaker3"]]["lastName"]}`;
+                            const names = `${firstSpeaker}, ${secondSpeaker}, ${thirdSpeaker}`;
+                            data["speakerObj"] = { "firstName": names, "lastName": ""}
+                        } else {
+                            data["speakerObj"] = spks[data["speaker"]];
+                        }
                         if (data["day"] === dayOne) {
                             result[0].push(data);
                         } else {
