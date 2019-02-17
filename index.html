@@ -243,6 +243,28 @@
 
 	<!-- Event Schedule -->
 	<section id="schedule">
+		<div v-for="(talk, index) in talks[0]" v-if="talk.speaker">
+			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker">
+				<div class="md-content">
+					<h3 style="margin-bottom: 0px; text-transform: none; color: white;">{{ talk.title }}</h4>
+					<h4 class="schedule-slot-speaker-name" v-if="talk.speaker" style="color: white;">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
+					<p class="mi-mb-30">{{ talk.description }}</p>
+					<button class="mi-btn md-close">Close</button>
+				</div>
+			</div>
+			<div class="md-overlay"></div>
+		</div>
+		<div v-for="(talk, index) in talks[1]" v-if="talk.speaker">
+			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker">
+				<div class="md-content">
+					<h3 style="margin-bottom: 0px; text-transform: none; color: white;">{{ talk.title }}</h4>
+					<h4 class="schedule-slot-speaker-name" style="color: white;" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
+					<p class="mi-mb-30">{{ talk.description }}</p>
+					<button class="mi-btn md-close">Close</button>
+				</div>
+			</div>
+			<div class="md-overlay"></div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -268,7 +290,8 @@
 							<div class="mi-timeline-para">
 								<h3 style="margin-bottom: 0px; text-transform: none;">{{ talk.title }}</h4>
 								<h4 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
-								<!-- <p style="padding-bottom: 10px;">{{ talk.description }}</p> -->
+								<p style="padding-bottom: 10px;" v-if="talk.shortDescription">{{ talk.shortDescription }}</p>
+								<button class="mi-btn mi-trigger read-more" :data-modal="'data-' + talk.speaker" v-if="talk.shortDescription">Read More</button>
 							</div>
 						</div>
 					</ul>
@@ -284,7 +307,8 @@
 							<div class="mi-timeline-para">
 								<h3 style="margin-bottom: 0px; text-transform: none;">{{ talk.title }}</h4>
 								<h4 class="schedule-slot-speaker-name" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
-								<!-- <p style="padding-bottom: 10px;">{{ talk.description }}</p> -->
+								<p style="padding-bottom: 10px;" v-if="talk.shortDescription">{{ talk.shortDescription }}</p>
+								<button class="mi-btn mi-trigger read-more" :data-modal="'data-' +  talk.speaker" v-if="talk.shortDescription">Read More</button>
 							</div>
 						</div>
 					</ul>
@@ -678,6 +702,10 @@
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<!-- Jquery Plugins -->
 	<script src="js/plugins/plugin_js.js"></script>
+	<!-- Modal Popup -->
+	<script src="js/popup/modernizr.custom.js"></script>
+	<script src="js/popup/classie.js"></script>
+	<script src="js/popup/modalEffects.js"></script>
 	<!-- Counters -->
 	<script src="js/counter/jquery.waypoints.min.js"></script>
 	<script src="js/counter/jquery.counterup.min.js"></script>

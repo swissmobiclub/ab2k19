@@ -33,7 +33,12 @@ new Vue({
             });
 
         }
-    }
+    },
+    updated: function () {
+        this.$nextTick(function () {
+          setTimeout(init, 1000);
+        })
+      }
 });
 
 new Vue({

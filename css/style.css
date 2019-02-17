@@ -2820,17 +2820,9 @@ li.active span.round-tabs.one, li.active span.round-tabs.two, li.active span.rou
 	
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.read-more {
+	height: 25px;
+	font-size: 11px;
+	line-height: 27px;
+	padding: 0 10px 0;
+}
