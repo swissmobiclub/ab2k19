@@ -244,22 +244,22 @@
 	<!-- Event Schedule -->
 	<section id="schedule">
 		<div v-for="(talk, index) in talks[0]" v-if="talk.speaker">
-			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker">
-				<div class="md-content">
+			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker" style="text-align: center; width: 90%;">
+				<div class="md-content" style="max-height: 400px;">
 					<h3 style="margin-bottom: 0px; text-transform: none; color: white;">{{ talk.title }}</h4>
 					<h4 class="schedule-slot-speaker-name" v-if="talk.speaker" style="color: white;">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
-					<p class="mi-mb-30">{{ talk.description }}</p>
+					<p class="mi-mb-30" style="max-height: 250px; overflow-y: auto;">{{ talk.description }}</p>
 					<button class="mi-btn md-close">Close</button>
 				</div>
 			</div>
 			<div class="md-overlay"></div>
 		</div>
 		<div v-for="(talk, index) in talks[1]" v-if="talk.speaker">
-			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker">
-				<div class="md-content">
+			<div class="md-modal md-effect-10" :id="'data-' + talk.speaker" style="text-align: center; width: 90%;">
+				<div class="md-content" style="max-height: 400px;">
 					<h3 style="margin-bottom: 0px; text-transform: none; color: white;">{{ talk.title }}</h4>
 					<h4 class="schedule-slot-speaker-name" style="color: white;" v-if="talk.speaker">{{ talk.speakerObj.firstName }} {{ talk.speakerObj.lastName }}</h3>
-					<p class="mi-mb-30">{{ talk.description }}</p>
+					<p class="mi-mb-30" style="max-height: 250px; overflow-y: auto;">{{ talk.description }}</p>
 					<button class="mi-btn md-close">Close</button>
 				</div>
 			</div>
