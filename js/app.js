@@ -24,7 +24,7 @@ new Vue({
         loadData: function() {
             var self = this;
 
-            db.collection("speakers").where("isStory", "==", false).get().then((speakers) => {
+            db.collection("speakers").where("isStory", "==", false).where("isLightning", "==", false).get().then((speakers) => {
                 var result = [];
                 speakers.forEach((s) => {
                     result.push(s.data());
@@ -53,7 +53,7 @@ new Vue({
         loadData: function() {
             var self = this;
 
-            db.collection("speakers").where("isStory", "==", true).get().then((speakers) => {
+            db.collection("speakers").where("isStory", "==", true).where("isLightning", "==", false).get().then((speakers) => {
                 var result = [];
                 speakers.forEach((s) => {
                     result.push(s.data());
