@@ -299,24 +299,7 @@ new Vue({
 new Vue({
     el: '#stories',
     data: {
-        stories: []
-    },
-    mounted: function() {
-        this.loadData();
-    },
-    methods: {
-        loadData: function() {
-            var self = this;
-
-            db.collection("speakers").where("isStory", "==", true).where("isLightning", "==", false).get().then((speakers) => {
-                var result = [];
-                speakers.forEach((s) => {
-                    result.push(s.data());
-                });
-                self.stories = result;
-            });
-
-        }
+        stories: [{"biography":"Vincent moved to Berlin over 6 years ago as one of SoundCloud’s first in-house iOS engineers. Since then, he led numerous high profile features and spearheaded the modularization of the application as iOS platform lead. He is now the director of engineering for media streaming. His team handles the transcoding and streaming backend infrastructure, as well as the embedded player and playback libraries present in all SoundCloud clients.","company":"SoundCloud","firstName":"Vincent","isLightning":false,"isStory":true,"jobTitle":"Director of Engineering - Media Streaming","lastName":"Garrigues","picture":"img/speakers/vincent.jpg","speakerId":12,"twitter":"garriguv"},{"biography":"Konstantin Haase is an open source developer, book author, and former opera star. In 2012, Konstantin received the Ruby Hero Award for his outstanding contributions to the community. He is a co-founder and leads the engineering department at Travis CI.","company":"Travis CI","firstName":"Konstantin","isLightning":false,"isStory":true,"jobTitle":"Head of Engineering","lastName":"Haase","picture":"img/speakers/konstantin.jpg","speakerId":25,"twitter":"konstantinhaase"}]
     }
 });
 
